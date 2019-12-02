@@ -25,7 +25,7 @@ user=> (check [{:a 4, :b 3} {:a 8 "b" 9}])
 Arbitrarily deep data structures are merged recursively.
 ```clojure
 user=> (check [{:a [{:a 3 :b ["a" "b" "c"]}] :b "b"}
-               {:a [{                        :b ["d"]}]}])
+               {:a [{     :b ["d"]}]}])
 [{:a [{:a java.lang.Long, :b [java.lang.String]}], :b java.lang.String}]
 ```
 Mixed type collections are handled like the following. Since map values don't have a nice way to be displayed in a sequential collection, they are indicated with `[:union (types...)]`.
